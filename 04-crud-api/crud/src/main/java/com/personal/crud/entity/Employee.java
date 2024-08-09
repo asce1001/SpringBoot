@@ -6,13 +6,21 @@ import jakarta.persistence.*;
 @Table(name = "employee")
 public class Employee {
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
     @Column(name = "first_name")
-    private String firsName;
+    private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
@@ -20,8 +28,8 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    public Employee(String firsName, String lastName, String email) {
-        this.firsName = firsName;
+    public Employee(String firstName, String lastName, String email) {
+        this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
@@ -30,12 +38,12 @@ public class Employee {
 
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firsName) {
+        this.firstName = firsName;
     }
 
     public String getLastName() {
