@@ -60,5 +60,4 @@ public class DemoSecurityConfig {
 //                .build();
 //        return new InMemoryUserDetailsManager(yatin, pradnya, ashwini);
 //    }
-
 }
